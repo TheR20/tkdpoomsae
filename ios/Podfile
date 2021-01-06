@@ -8,6 +8,10 @@ target 'tkdpoomsae' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  pod 'ReactNativeLocalization', :path => '../node_modules/react-native-localization'
+
   target 'tkdpoomsaeTests' do
     inherit! :complete
     # Pods for testing
