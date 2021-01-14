@@ -5,6 +5,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 import gifmoviendose from './src/imagen';
 import registros from './src/registros.json';
 import {   Button, Text  } from 'galio-framework'
+import { BannerAd, BannerAdSize, TestIds } from '@react-native-firebase/admob';
+
+const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-xxxxxxxxxxxxx/yyyyyyyyyyyyyy';
+
+const bannerSuperiorID = "ca-app-pub-8454341646863233/9345828205";
 
 function HomeScreen({ navigation }) {
   const image = "https://titanchannel.com/blog/wp-content/uploads/2017/08/Captura-de-pantalla-2017-08-04-a-las-15.15.27.png";
@@ -14,6 +19,15 @@ function HomeScreen({ navigation }) {
 
 
 <ImageBackground style={styles.backgroundImage} source={{uri:  image}}>
+<View>
+<BannerAd
+  unitId={bannerSuperiorID}
+  size={BannerAdSize.ADAPTIVE_BANNER}
+  requestOptions={{
+    requestNonPersonalizedAdsOnly: true,
+  }}
+/>
+</View>
 
          <FlatList
                       data={registros}

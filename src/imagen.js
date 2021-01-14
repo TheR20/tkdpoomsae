@@ -38,7 +38,11 @@ let strings = new LocalizedStrings({
   },
 
 });
+import { BannerAd, BannerAdSize, TestIds } from '@react-native-firebase/admob';
 
+const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-xxxxxxxxxxxxx/yyyyyyyyyyyyyy';
+
+const bannerSuperiorID = "ca-app-pub-8454341646863233/2971991548";
 
 const App: () => React$Node = ({ route, navigation }) => {
   const image = "https://titanchannel.com/blog/wp-content/uploads/2017/08/Captura-de-pantalla-2017-08-04-a-las-15.15.27.png";
@@ -50,6 +54,15 @@ const App: () => React$Node = ({ route, navigation }) => {
 
   return (
 <ImageBackground style={styles.backgroundImage} source={{uri:  image}}>
+<View style={{  marginTop: 10, }}>
+<BannerAd
+unitId={bannerSuperiorID}
+size={BannerAdSize.ADAPTIVE_BANNER}
+requestOptions={{
+requestNonPersonalizedAdsOnly: true,
+}}
+/>
+</View>
     <ScrollView>
     <View>
       <Text style={styles.topBox2}> POOMSAE { Nombre }</Text>
@@ -69,6 +82,8 @@ const App: () => React$Node = ({ route, navigation }) => {
                        source={{uri: UrlFoto }}/>
             </ImageZoom>
             </View>
+
+
             </ScrollView>
               </ImageBackground>
   );
