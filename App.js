@@ -83,7 +83,8 @@ function App() {
 const styles = StyleSheet.create({
   artistBox:{
       margin: 20,
-      backgroundColor: '#F8992E',
+      borderRadius:18,
+      backgroundColor: '#324851',
       flexDirection: 'row',
       shadowColor: 'black',
       shadowOpacity: .2,

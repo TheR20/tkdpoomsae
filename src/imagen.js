@@ -52,9 +52,9 @@ const App: () => React$Node = ({ route, navigation }) => {
 <ImageBackground style={styles.backgroundImage} source={{uri:  image}}>
     <ScrollView>
     <View>
-      <Text style={styles.topBox2}> Poomsae: { Nombre }</Text>
+      <Text style={styles.topBox2}> POOMSAE { Nombre }</Text>
 <View style={styles.loginButtonSection}>
-      <Button round uppercase color="#F08F21" size="large" style={{ marginTop:  20,
+      <Button round uppercase color="#324851" size="large" style={{ marginTop:  20,
            fontFamily: 'serif', }} onPress={() => {
     //on clicking we are going to open the URL using Linking
     Linking.openURL( UrlCom );
