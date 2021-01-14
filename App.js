@@ -7,11 +7,13 @@ import registros from './src/registros.json';
 import {   Button, Text  } from 'galio-framework'
 
 function HomeScreen({ navigation }) {
+  const image = "https://titanchannel.com/blog/wp-content/uploads/2017/08/Captura-de-pantalla-2017-08-04-a-las-15.15.27.png";
+
   return (
 
 
 
-
+<ImageBackground style={styles.backgroundImage} source={{uri:  image}}>
 
          <FlatList
                       data={registros}
@@ -36,18 +38,11 @@ function HomeScreen({ navigation }) {
                </TouchableOpacity>
 
                             )
-
-
-
-
-
                       }
                        }
                     keyExtractor={(item, index) => index.toString()}
                     />
-
-
-
+  </ImageBackground>
 
   );
 }
@@ -87,8 +82,8 @@ function App() {
 
 const styles = StyleSheet.create({
   artistBox:{
-      margin: 5,
-      backgroundColor: '#7E7F7A',
+      margin: 20,
+      backgroundColor: '#F8992E',
       flexDirection: 'row',
       shadowColor: 'black',
       shadowOpacity: .2,
@@ -100,8 +95,8 @@ const styles = StyleSheet.create({
     },
 
     image:{
-      width: 150,
-      height: 150,
+      width: 130,
+      height: 130,
     },
 
     info:{
@@ -114,7 +109,7 @@ const styles = StyleSheet.create({
     titulo:{
       fontWeight: "bold",
        textAlign: 'center',
-         fontSize: 18,
+         fontSize: 20,
        color:'white',
 
     },

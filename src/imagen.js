@@ -54,7 +54,7 @@ const App: () => React$Node = ({ route, navigation }) => {
     <View>
       <Text style={styles.topBox2}> Poomsae: { Nombre }</Text>
 <View style={styles.loginButtonSection}>
-      <Button round uppercase color="#8E9C20" size="large" style={{ marginTop:  20,
+      <Button round uppercase color="#F08F21" size="large" style={{ marginTop:  20,
            fontFamily: 'serif', }} onPress={() => {
     //on clicking we are going to open the URL using Linking
     Linking.openURL( UrlCom );
@@ -62,10 +62,10 @@ const App: () => React$Node = ({ route, navigation }) => {
   }} >{strings.a1}</Button>
 </View>
     <ImageZoom cropWidth={Dimensions.get('window').width}
-                       cropHeight={Dimensions.get('window').height}
+                cropHeight={Dimensions.get('window').height}
                        imageWidth={400}
                        imageHeight={400}>
-                <Image style={{width:400, height:400}}
+                <Image style={{flex: 1}}
                        source={{uri: UrlFoto }}/>
             </ImageZoom>
             </View>
